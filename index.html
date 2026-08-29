@@ -3,330 +3,2347 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ELLKA — Real Estate & Investment</title>
-<meta name="description" content="ELLKA — Carefully selected real estate opportunities across Lahore and beyond.">
+
+<meta name="description"
+content="ELLKA — Carefully selected real estate opportunities across Lahore and beyond.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap"
+rel="stylesheet">
 
 <style>
-:root{
-  --ivory:#F7F4EE;--charcoal:#1E2521;--sage:#667067;--gold:#A88755;
-  --card:#FFFDF9;--border:#DDD7CC;--shadow:0 14px 40px rgba(30,37,33,.09)
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Manrope,sans-serif;background:var(--ivory);color:var(--charcoal);line-height:1.6;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-.navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(247,244,238,.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(221,215,204,.8)}
-.nav-inner{max-width:1200px;height:76px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center}
-.brand img{width:118px;height:auto;max-height:50px;object-fit:contain;object-position:left center}
-.nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{font-size:13px;font-weight:700;color:var(--sage)}
-.nav-links a:hover{color:var(--charcoal)}
-.menu-btn{display:none;border:0;background:none;font-size:27px;color:var(--charcoal)}
-.hero{max-width:1400px;margin:auto;padding:110px 16px 35px}
-.hero-media{min-height:680px;border-radius:4px;overflow:hidden;position:relative;background:#1e2521}
-.hero-media img{width:100%;height:680px;object-fit:cover;object-position:center}
-.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,22,19,.72),rgba(15,22,19,.20) 65%,rgba(15,22,19,.40))}
-.hero-content{position:absolute;z-index:2;left:8%;bottom:11%;max-width:650px;color:#fff}
-.kicker{display:flex;align-items:center;gap:12px;color:#eee7d8;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
-.kicker:before{content:"";width:2px;height:30px;background:var(--gold)}
-h1,h2,h3{font-family:"DM Serif Display",serif;font-weight:400}
-h1{font-size:clamp(48px,7vw,84px);line-height:1.02;margin-bottom:22px}
-.hero p{font-size:16px;color:#f0eee8;max-width:570px;margin-bottom:28px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{min-height:48px;padding:0 22px;display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;font-size:13px;font-weight:700;transition:.25s}
-.primary{background:var(--gold);color:#fff}.primary:hover{background:#927344;transform:translateY(-2px)}
-.light{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.7);color:#fff;backdrop-filter:blur(8px)}
-.light:hover{background:#fff;color:var(--charcoal)}
-.section{max-width:1200px;margin:auto;padding:95px 24px}
-.section-heading{max-width:720px;margin-bottom:48px}
-.section-kicker{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
-.section-kicker:before{content:"";width:2px;height:27px;background:var(--gold)}
-h2{font-size:clamp(38px,5vw,58px);line-height:1.1}
-.section-heading p{margin-top:17px;color:var(--sage)}
-.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
-.project-card{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:.3s}
-.project-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.project-image{height:300px;position:relative;overflow:hidden}
-.project-image img{width:100%;height:100%;object-fit:cover}
-.project-number{position:absolute;top:17px;left:17px;background:rgba(255,253,249,.95);padding:7px 11px;font-size:11px;letter-spacing:2px}
-.project-content{padding:28px}
-.project-content h3{font-size:30px}
-.location{color:var(--sage);font-size:13px;margin-top:4px}
-.project-info{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:24px 0;padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.info-label{display:block;color:var(--sage);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}
-.info-value{font-size:14px;font-weight:700}
-.project-description{color:var(--sage);font-size:14px;margin-bottom:22px}
-.project-link{font-size:13px;font-weight:700;border-bottom:1px solid var(--gold);padding-bottom:4px}
-.trust{background:var(--charcoal);color:#fff;max-width:none}
-.trust-inner{max-width:1200px;margin:auto;padding:95px 24px}
-.trust h2{color:#fff}.trust-intro{color:#bfc5bf;max-width:650px;margin-top:17px}
-.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:55px;background:rgba(255,255,255,.12)}
-.trust-card{background:var(--charcoal);padding:35px}.trust-line{width:25px;height:2px;background:var(--gold);margin-bottom:25px}
-.trust-card h3{font-family:Manrope;font-size:18px;font-weight:700;margin-bottom:10px}
-.trust-card p{color:#aeb6af;font-size:14px}
-.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
-.about-text p{color:var(--sage);font-size:16px;margin-bottom:20px}
-.owner-card{background:var(--card);border:1px solid var(--border);padding:38px;position:relative}
-.owner-card:before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:var(--gold)}
-.owner-label{color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase}
-.owner-card h3{font-size:38px;margin:8px 0}.owner-card p{color:var(--sage)}
-.contact{background:#eeeae1;max-width:none}
-.contact-inner{max-width:1200px;margin:auto;padding:95px 24px}
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:45px}
-.contact-card{background:var(--card);border:1px solid var(--border);padding:25px}
-.contact-card small{display:block;color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px}
-.contact-card a{font-size:14px;font-weight:700;word-break:break-word}
-footer{background:var(--charcoal);color:#aeb6af;padding:30px 20px;text-align:center;font-size:12px}
-footer strong{color:var(--gold)}
 
-@media(max-width:800px){
-  .nav-inner{height:68px}.brand img{width:105px}
-  .menu-btn{display:block}.nav-links{position:absolute;top:68px;left:0;width:100%;display:none;flex-direction:column;align-items:flex-start;padding:20px 24px;gap:18px;background:var(--ivory);border-bottom:1px solid var(--border)}
-  .nav-links.active{display:flex}
-  .hero{padding:82px 10px 20px}.hero-media{min-height:650px}.hero-media img{height:650px}
-  .hero-content{left:25px;right:25px;bottom:40px}.hero h1{font-size:51px}
-  .project-grid,.about-grid,.trust-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr 1fr}
+:root{
+  --ivory:#F7F4EE;
+  --charcoal:#1E2521;
+  --sage:#667067;
+  --gold:#A88755;
+  --card:#FFFDF9;
+  --border:#DDD7CC;
+  --shadow:0 14px 40px rgba(30,37,33,.09)
 }
-@media(max-width:480px){
-  .hero-media,.hero-media img{height:650px;min-height:650px}
-  .hero h1{font-size:45px}.hero p{font-size:14px}
-  .buttons{flex-direction:column}.btn{width:100%}
-  .project-image{height:235px}.section,.trust-inner,.contact-inner{padding:75px 18px}
-  .contact-grid{grid-template-columns:1fr}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box
 }
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  font-family:Manrope,sans-serif;
+  background:var(--ivory);
+  color:var(--charcoal);
+  line-height:1.6;
+  overflow-x:hidden
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+img{
+  display:block;
+  max-width:100%
+}
+
+
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(247,244,238,.93);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(221,215,204,.8)
+}
+
+.nav-inner{
+  max-width:1200px;
+  height:76px;
+  margin:auto;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.brand{
+  display:flex;
+  align-items:center
+}
+
+.brand img{
+  width:118px;
+  height:auto;
+  max-height:50px;
+  object-fit:contain;
+  object-position:left center
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center
+}
+
+.nav-links a{
+  font-size:13px;
+  font-weight:700;
+  color:var(--sage)
+}
+
+.nav-links a:hover{
+  color:var(--charcoal)
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  font-size:27px;
+  color:var(--charcoal);
+  cursor:pointer
+}
+
+
+/* HERO */
+
+.hero{
+  max-width:1400px;
+  margin:auto;
+  padding:110px 16px 35px
+}
+
+.hero-media{
+  min-height:680px;
+  border-radius:4px;
+  overflow:hidden;
+  position:relative;
+  background:#1e2521
+}
+
+.hero-media img{
+  width:100%;
+  height:680px;
+  object-fit:cover;
+  object-position:center
+}
+
+.hero-media:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(15,22,19,.72),
+    rgba(15,22,19,.20) 65%,
+    rgba(15,22,19,.40)
+  )
+}
+
+.hero-content{
+  position:absolute;
+  z-index:2;
+  left:8%;
+  bottom:11%;
+  max-width:650px;
+  color:#fff
+}
+
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#eee7d8;
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:18px
+}
+
+.kicker:before{
+  content:"";
+  width:2px;
+  height:30px;
+  background:var(--gold)
+}
+
+h1,
+h2,
+h3{
+  font-family:"DM Serif Display",serif;
+  font-weight:400
+}
+
+h1{
+  font-size:clamp(48px,7vw,84px);
+  line-height:1.02;
+  margin-bottom:22px
+}
+
+.hero p{
+  font-size:16px;
+  color:#f0eee8;
+  max-width:570px;
+  margin-bottom:28px
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
+
+.btn{
+  min-height:48px;
+  padding:0 22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid transparent;
+  font-size:13px;
+  font-weight:700;
+  transition:.25s
+}
+
+.primary{
+  background:var(--gold);
+  color:#fff
+}
+
+.primary:hover{
+  background:#927344;
+  transform:translateY(-2px)
+}
+
+.light{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.7);
+  color:#fff;
+  backdrop-filter:blur(8px)
+}
+
+.light:hover{
+  background:#fff;
+  color:var(--charcoal)
+}
+
+
+/* GENERAL SECTIONS */
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:95px 24px
+}
+
+.section-heading{
+  max-width:720px;
+  margin-bottom:48px
+}
+
+.section-kicker{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--gold);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:14px
+}
+
+.section-kicker:before{
+  content:"";
+  width:2px;
+  height:27px;
+  background:var(--gold)
+}
+
+h2{
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.1
+}
+
+.section-heading p{
+  margin-top:17px;
+  color:var(--sage)
+}
+
+
+/* PROJECTS */
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:25px
+}
+
+.project-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  overflow:hidden;
+  transition:.3s
+}
+
+.project-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow)
+}
+
+.project-image{
+  height:300px;
+  position:relative;
+  overflow:hidden
+}
+
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+
+.project-number{
+  position:absolute;
+  top:17px;
+  left:17px;
+  background:rgba(255,253,249,.95);
+  padding:7px 11px;
+  font-size:11px;
+  letter-spacing:2px
+}
+
+.project-content{
+  padding:28px
+}
+
+.project-content h3{
+  font-size:30px
+}
+
+.location{
+  color:var(--sage);
+  font-size:13px;
+  margin-top:4px
+}
+
+.project-info{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin:24px 0;
+  padding:18px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border)
+}
+
+.info-label{
+  display:block;
+  color:var(--sage);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:5px
+}
+
+.info-value{
+  font-size:14px;
+  font-weight:700
+}
+
+.project-description{
+  color:var(--sage);
+  font-size:14px;
+  margin-bottom:22px
+}
+
+.project-link{
+  font-size:13px;
+  font-weight:700;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:4px
+}
+
+
+/* TRUST */
+
+.trust{
+  background:var(--charcoal);
+  color:#fff;
+  max-width:none
+}
+
+.trust-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:95px 24px
+}
+
+.trust h2{
+  color:#fff
+}
+
+.trust-intro{
+  color:#bfc5bf;
+  max-width:650px;
+  margin-top:17px
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  margin-top:55px;
+  background:rgba(255,255,255,.12)
+}
+
+.trust-card{
+  background:var(--charcoal);
+  padding:35px
+}
+
+.trust-line{
+  width:25px;
+  height:2px;
+  background:var(--gold);
+  margin-bottom:25px
+}
+
+.trust-card h3{
+  font-family:Manrope;
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:10px
+}
+
+.trust-card p{
+  color:#aeb6af;
+  font-size:14px
+}
+
+
+/* ABOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center
+}
+
+.about-text p{
+  color:var(--sage);
+  font-size:16px;
+  margin-bottom:20px
+}
+
+.owner-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:38px;
+  position:relative
+}
+
+.owner-card:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:3px;
+  background:var(--gold)
+}
+
+.owner-label{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase
+}
+
+.owner-card h3{
+  font-size:38px;
+  margin:8px 0
+}
+
+.owner-card p{
+  color:var(--sage)
+}
+
+
+/* CONTACT */
+
+.contact{
+  background:#eeeae1;
+  max-width:none
+}
+
+.contact-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:95px 24px
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:45px;
+  max-width:650px
+}
+
+.contact-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:25px
+}
+
+.contact-card small{
+  display:block;
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:9px
+}
+
+.contact-card a{
+  font-size:14px;
+  font-weight:700;
+  word-break:break-word
+}
+
+
+/* FOOTER */
+
+footer{
+  background:var(--charcoal);
+  color:#aeb6af;
+  padding:30px 20px;
+  text-align:center;
+  font-size:12px
+}
+
+footer strong{
+  color:var(--gold)
+}
+
 
 /* ADMIN DASHBOARD */
-.admin{display:none;background:#e9e5dc;border-top:1px solid var(--border)}
-.admin.active{display:block}.admin-inner{max-width:1200px;margin:auto;padding:75px 24px}
-.admin-box{background:var(--card);border:1px solid var(--border);padding:25px;margin-top:22px}
-.admin-title{font-family:"DM Serif Display",serif;font-size:48px;font-weight:400}
-.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
-.admin-input{width:100%;padding:13px;border:1px solid var(--border);background:#fff;color:var(--charcoal);outline:none}
-.admin-input:focus{border-color:var(--gold)}.admin-full{grid-column:1/-1}
-.admin-file{padding:11px;border:1px dashed var(--border);background:#fff;width:100%}
-.admin-preview{display:none;max-width:260px;max-height:170px;object-fit:cover;border:1px solid var(--border);margin-top:8px}
-.admin-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--border)}
-.admin-row-left{display:flex;align-items:center;gap:12px}.admin-thumb{width:75px;height:55px;object-fit:cover}
-.admin-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-btn{border:0;padding:10px 14px;cursor:pointer;font-weight:700}
-.admin-primary{background:var(--gold);color:#fff}.admin-dark{background:var(--charcoal);color:#fff}.admin-delete{background:#fff;border:1px solid #c8bfb0;color:#8b4b43}
-.admin-note{color:var(--sage);font-size:12px;margin-top:15px}.admin-login{position:fixed;inset:0;background:rgba(20,25,22,.72);backdrop-filter:blur(8px);z-index:3000;display:none;align-items:center;justify-content:center;padding:20px}.admin-login.active{display:flex}
-.login-card{width:min(420px,100%);background:var(--card);border:1px solid var(--border);padding:32px;box-shadow:var(--shadow)}.login-card h2{margin-bottom:8px}.login-card p{color:var(--sage);font-size:13px;margin-bottom:18px}.login-error{color:#8b4b43;font-size:12px;min-height:18px;margin:8px 0}
-@media(max-width:800px){.admin-form{grid-template-columns:1fr}.admin-full{grid-column:auto}.admin-inner{padding:65px 18px}.admin-row{align-items:flex-start;flex-direction:column}.admin-row-left{width:100%}}
+
+.admin{
+  display:none;
+  background:#e9e5dc;
+  border-top:1px solid var(--border)
+}
+
+.admin.active{
+  display:block
+}
+
+.admin-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:75px 24px
+}
+
+.admin-box{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:25px;
+  margin-top:22px
+}
+
+.admin-title{
+  font-family:"DM Serif Display",serif;
+  font-size:48px;
+  font-weight:400
+}
+
+.admin-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:20px
+}
+
+.admin-input{
+  width:100%;
+  padding:13px;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--charcoal);
+  outline:none;
+  font-family:Manrope,sans-serif
+}
+
+.admin-input:focus{
+  border-color:var(--gold)
+}
+
+.admin-full{
+  grid-column:1/-1
+}
+
+.admin-file{
+  padding:11px;
+  border:1px dashed var(--border);
+  background:#fff;
+  width:100%
+}
+
+.admin-preview{
+  display:none;
+  max-width:260px;
+  max-height:170px;
+  object-fit:cover;
+  border:1px solid var(--border);
+  margin-top:8px
+}
+
+.admin-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid var(--border)
+}
+
+.admin-row-left{
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+
+.admin-thumb{
+  width:75px;
+  height:55px;
+  object-fit:cover
+}
+
+.admin-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap
+}
+
+.admin-btn{
+  border:0;
+  padding:10px 14px;
+  cursor:pointer;
+  font-weight:700
+}
+
+.admin-primary{
+  background:var(--gold);
+  color:#fff
+}
+
+.admin-dark{
+  background:var(--charcoal);
+  color:#fff
+}
+
+.admin-delete{
+  background:#fff;
+  border:1px solid #c8bfb0;
+  color:#8b4b43
+}
+
+.admin-note{
+  color:var(--sage);
+  font-size:12px;
+  margin-top:15px
+}
+
+
+/* ADMIN LOGIN */
+
+.admin-login{
+  position:fixed;
+  inset:0;
+  background:rgba(20,25,22,.72);
+  backdrop-filter:blur(8px);
+  z-index:3000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px
+}
+
+.admin-login.active{
+  display:flex
+}
+
+.login-card{
+  width:min(420px,100%);
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:32px;
+  box-shadow:var(--shadow)
+}
+
+.login-card h2{
+  margin-bottom:8px
+}
+
+.login-card p{
+  color:var(--sage);
+  font-size:13px;
+  margin-bottom:18px
+}
+
+.login-error{
+  color:#8b4b43;
+  font-size:12px;
+  min-height:18px;
+  margin:8px 0
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .nav-inner{
+    height:68px
+  }
+
+  .brand img{
+    width:105px
+  }
+
+  .menu-btn{
+    display:block
+  }
+
+  .nav-links{
+    position:absolute;
+    top:68px;
+    left:0;
+    width:100%;
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:20px 24px;
+    gap:18px;
+    background:var(--ivory);
+    border-bottom:1px solid var(--border)
+  }
+
+  .nav-links.active{
+    display:flex
+  }
+
+  .hero{
+    padding:82px 10px 20px
+  }
+
+  .hero-media{
+    min-height:650px
+  }
+
+  .hero-media img{
+    height:650px
+  }
+
+  .hero-content{
+    left:25px;
+    right:25px;
+    bottom:40px
+  }
+
+  .hero h1{
+    font-size:51px
+  }
+
+  .project-grid,
+  .about-grid,
+  .trust-grid{
+    grid-template-columns:1fr
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr
+  }
+
+  .admin-form{
+    grid-template-columns:1fr
+  }
+
+  .admin-full{
+    grid-column:auto
+  }
+
+  .admin-inner{
+    padding:65px 18px
+  }
+
+  .admin-row{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  .admin-row-left{
+    width:100%
+  }
+
+}
+
+
+@media(max-width:480px){
+
+  .hero-media,
+  .hero-media img{
+    height:650px;
+    min-height:650px
+  }
+
+  .hero h1{
+    font-size:45px
+  }
+
+  .hero p{
+    font-size:14px
+  }
+
+  .buttons{
+    flex-direction:column
+  }
+
+  .btn{
+    width:100%
+  }
+
+  .project-image{
+    height:235px
+  }
+
+  .section,
+  .trust-inner,
+  .contact-inner{
+    padding:75px 18px
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr
+  }
+
+}
 
 </style>
 </head>
+
+
 <body>
 
+
+<!-- NAVIGATION -->
+
 <nav class="navbar">
+
   <div class="nav-inner">
-    <a class="brand" href="#home"><img src="ellka-logo.png" alt="ELLKA Real Estate & Investment"></a>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+    <a class="brand" href="#home">
+
+      <img
+        src="file_00000000988c81faa1b6d60a73ac2a93.png"
+        alt="ELLKA Real Estate & Investment"
+      >
+
+    </a>
+
+
+    <button
+      class="menu-btn"
+      onclick="toggleMenu()"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+
     <div class="nav-links" id="navLinks">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#" onclick="openAdmin();return false;">Manage</a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+      <a
+        href="#"
+        onclick="openAdmin();return false;"
+      >
+        Manage
+      </a>
+
     </div>
+
   </div>
+
 </nav>
 
+
+<!-- HERO -->
+
 <section class="hero" id="home">
+
   <div class="hero-media">
-    <img src="bahria-sky-1.png" alt="Bahria Sky development">
+
+    <img
+      src="file_0000000053e88211a2e6721990e56bae.png"
+      alt="Bahria Sky development"
+    >
+
+
     <div class="hero-content">
-      <div class="kicker">Real Estate & Investment</div>
-      <h1>Real Estate,<br>With Clarity.</h1>
-      <p>Carefully selected real estate opportunities across Lahore and beyond.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#projects">Explore Projects</a>
-        <a class="btn light" href="#contact">Talk to an Advisor</a>
+
+      <div class="kicker">
+        Real Estate & Investment
       </div>
+
+
+      <h1>
+        Real Estate,<br>
+        With Clarity.
+      </h1>
+
+
+      <p>
+        Carefully selected real estate opportunities
+        across Lahore and beyond.
+      </p>
+
+
+      <div class="buttons">
+
+        <a
+          class="btn primary"
+          href="#projects"
+        >
+          Explore Projects
+        </a>
+
+
+        <a
+          class="btn light"
+          href="#contact"
+        >
+          Talk to an Advisor
+        </a>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- PROJECTS -->
 
 <section class="section" id="projects">
+
   <div class="section-heading">
-    <div class="section-kicker">Featured Projects</div>
-    <h2>Selected opportunities.</h2>
-    <p>Explore current projects presented through ELLKA. Project information can be updated as availability and pricing change.</p>
+
+    <div class="section-kicker">
+      Featured Projects
+    </div>
+
+
+    <h2>
+      Selected opportunities.
+    </h2>
+
+
+    <p>
+      Explore current projects presented through ELLKA.
+      Project information can be updated as availability
+      and pricing change.
+    </p>
+
   </div>
+
 
   <div class="project-grid">
-    <article class="project-card">
-      <div class="project-image">
-        <img src="bahria-sky-1.png" alt="Bahria Sky 1">
-        <div class="project-number">01</div>
-      </div>
-      <div class="project-content">
-        <h3>Bahria Sky 1</h3>
-        <div class="location">Lahore</div>
-        <div class="project-info">
-          <div><span class="info-label">Starting Price</span><span class="info-value">Contact for pricing</span></div>
-          <div><span class="info-label">Payment Plan</span><span class="info-value">Contact ELLKA</span></div>
-        </div>
-        <p class="project-description">A current development opportunity presented through ELLKA in association with OZ Developers.</p>
-        <a class="project-link" href="#contact">View Details →</a>
-      </div>
-    </article>
+
+
+    <!-- BAHRIA SKY 1 -->
 
     <article class="project-card">
+
       <div class="project-image">
-        <img src="bahria-sky-2.jpg" alt="Bahria Sky 2 and featured developments">
-        <div class="project-number">02</div>
-      </div>
-      <div class="project-content">
-        <h3>Bahria Sky 2</h3>
-        <div class="location">Lahore</div>
-        <div class="project-info">
-          <div><span class="info-label">Starting Price</span><span class="info-value">Contact for pricing</span></div>
-          <div><span class="info-label">Payment Plan</span><span class="info-value">Payment plan available</span></div>
+
+        <img
+          src="file_0000000053e88211a2e6721990e56bae.png"
+          alt="Bahria Sky 1"
+        >
+
+        <div class="project-number">
+          01
         </div>
-        <p class="project-description">A featured development opportunity presented through ELLKA. Contact us for current details.</p>
-        <a class="project-link" href="#contact">View Details →</a>
+
       </div>
+
+
+      <div class="project-content">
+
+        <h3>
+          Bahria Sky 1
+        </h3>
+
+
+        <div class="location">
+          Lahore
+        </div>
+
+
+        <div class="project-info">
+
+          <div>
+
+            <span class="info-label">
+              Starting Price
+            </span>
+
+            <span class="info-value">
+              Contact for pricing
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <span class="info-label">
+              Payment Plan
+            </span>
+
+            <span class="info-value">
+              Contact ELLKA
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <p class="project-description">
+          A current development opportunity presented
+          through ELLKA in association with OZ Developers.
+        </p>
+
+
+        <a
+          class="project-link"
+          href="#contact"
+        >
+          View Details →
+        </a>
+
+      </div>
+
     </article>
+
+
+    <!-- BAHRIA SKY 2 -->
+
+    <article class="project-card">
+
+      <div class="project-image">
+
+        <img
+          src="file_000000007fec8211ba2c4f8ef408c.png"
+          alt="Bahria Sky 2"
+        >
+
+        <div class="project-number">
+          02
+        </div>
+
+      </div>
+
+
+      <div class="project-content">
+
+        <h3>
+          Bahria Sky 2
+        </h3>
+
+
+        <div class="location">
+          Lahore
+        </div>
+
+
+        <div class="project-info">
+
+          <div>
+
+            <span class="info-label">
+              Starting Price
+            </span>
+
+            <span class="info-value">
+              Contact for pricing
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <span class="info-label">
+              Payment Plan
+            </span>
+
+            <span class="info-value">
+              Payment plan available
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <p class="project-description">
+          A featured development opportunity presented
+          through ELLKA. Contact us for current details.
+        </p>
+
+
+        <a
+          class="project-link"
+          href="#contact"
+        >
+          View Details →
+        </a>
+
+      </div>
+
+    </article>
+
   </div>
+
 </section>
+
+
+<!-- WHY ELLKA -->
 
 <section class="trust">
+
   <div class="trust-inner">
+
     <div class="section-heading">
-      <div class="section-kicker">Why ELLKA</div>
-      <h2>Information before impression.</h2>
-      <p class="trust-intro">We focus on giving clients clear project information so they can make informed property decisions.</p>
+
+      <div class="section-kicker">
+        Why ELLKA
+      </div>
+
+
+      <h2>
+        Information before impression.
+      </h2>
+
+
+      <p class="trust-intro">
+        We focus on giving clients clear project
+        information so they can make informed
+        property decisions.
+      </p>
+
     </div>
+
+
     <div class="trust-grid">
-      <div class="trust-card"><div class="trust-line"></div><h3>Verified Projects</h3><p>Projects sourced through established developer and agency relationships.</p></div>
-      <div class="trust-card"><div class="trust-line"></div><h3>Transparent Information</h3><p>Clear pricing, payment plans and project details where available.</p></div>
-      <div class="trust-card"><div class="trust-line"></div><h3>Personal Assistance</h3><p>Guidance from initial inquiry through the property decision process.</p></div>
+
+
+      <div class="trust-card">
+
+        <div class="trust-line"></div>
+
+        <h3>
+          Verified Projects
+        </h3>
+
+        <p>
+          Projects sourced through established
+          developer and agency relationships.
+        </p>
+
+      </div>
+
+
+      <div class="trust-card">
+
+        <div class="trust-line"></div>
+
+        <h3>
+          Transparent Information
+        </h3>
+
+        <p>
+          Clear pricing, payment plans and project
+          details where available.
+        </p>
+
+      </div>
+
+
+      <div class="trust-card">
+
+        <div class="trust-line"></div>
+
+        <h3>
+          Personal Assistance
+        </h3>
+
+        <p>
+          Guidance from initial inquiry through
+          the property decision process.
+        </p>
+
+      </div>
+
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section class="section" id="about">
+
   <div class="section-heading">
-    <div class="section-kicker">About ELLKA</div>
-    <h2>Property with perspective.</h2>
+
+    <div class="section-kicker">
+      About ELLKA
+    </div>
+
+
+    <h2>
+      Property with perspective.
+    </h2>
+
   </div>
+
+
   <div class="about-grid">
+
+
     <div class="about-text">
-      <p>ELLKA is a real estate and investment company focused on presenting carefully selected property opportunities.</p>
-      <p>Our approach is straightforward: provide useful information, explain the opportunity clearly and help clients make informed decisions.</p>
+
+      <p>
+        ELLKA is a real estate and investment company
+        focused on presenting carefully selected
+        property opportunities.
+      </p>
+
+
+      <p>
+        Our approach is straightforward: provide useful
+        information, explain the opportunity clearly
+        and help clients make informed decisions.
+      </p>
+
     </div>
+
+
     <div class="owner-card">
-      <div class="owner-label">Owner</div>
-      <h3>Shayan</h3>
-      <p>Owner of ELLKA Inc.</p>
+
+      <div class="owner-label">
+        Owner
+      </div>
+
+
+      <h3>
+        Shayan
+      </h3>
+
+
+      <p>
+        Owner of ELLKA Inc.
+      </p>
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
+
   <div class="contact-inner">
+
+
     <div class="section-heading">
-      <div class="section-kicker">Contact</div>
-      <h2>Start with a conversation.</h2>
-      <p>Reach ELLKA for project information, availability and investment inquiries.</p>
+
+      <div class="section-kicker">
+        Contact
+      </div>
+
+
+      <h2>
+        Start with a conversation.
+      </h2>
+
+
+      <p>
+        Reach ELLKA for project information,
+        availability and investment inquiries.
+      </p>
+
     </div>
+
+
     <div class="contact-grid">
-      <div class="contact-card"><small>Phone</small><a href="tel:+923021474791">+92 302 1474791</a></div>
-      <div class="contact-card"><small>WhatsApp</small><a href="https://wa.me/923021474791" target="_blank" rel="noopener">WhatsApp ELLKA</a></div>
-      <div class="contact-card"><small>Instagram</small><a href="https://www.instagram.com/ellkaainc" target="_blank" rel="noopener">@ellkaainc</a></div>
-      <div class="contact-card"><small>Website</small><a href="https://ellka.com" target="_blank" rel="noopener">ellka.com</a></div>
+
+
+      <!-- WHATSAPP -->
+
+      <div class="contact-card">
+
+        <small>
+          WhatsApp
+        </small>
+
+
+        <a
+          href="https://wa.me/923021474791"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp ELLKA
+        </a>
+
+      </div>
+
+
+      <!-- INSTAGRAM -->
+
+      <div class="contact-card">
+
+        <small>
+          Instagram
+        </small>
+
+
+        <a
+          href="https://www.instagram.com/ellkaainc"
+          target="_blank"
+          rel="noopener"
+        >
+          @ellkaainc
+        </a>
+
+      </div>
+
+
     </div>
+
   </div>
+
 </section>
 
+
+<!-- ADMIN DASHBOARD -->
 
 <section class="admin" id="admin">
+
   <div class="admin-inner">
-    <div class="section-kicker">Website Management</div>
-    <h2 class="admin-title">Manage Projects.</h2>
-    <div class="admin-actions" style="margin-top:18px">
-      <button class="admin-btn admin-primary" onclick="publishProject()">Publish Project</button>
-      <button class="admin-btn admin-dark" onclick="resetProjectForm()">Clear Form</button>
-      <button class="admin-btn" style="background:#fff;border:1px solid var(--border)" onclick="closeAdmin()">Close</button>
-      <button class="admin-btn admin-delete" onclick="logoutAdmin()">Log Out</button>
+
+
+    <div class="section-kicker">
+      Website Management
     </div>
+
+
+    <h2 class="admin-title">
+      Manage Projects.
+    </h2>
+
+
+    <div
+      class="admin-actions"
+      style="margin-top:18px"
+    >
+
+      <button
+        class="admin-btn admin-primary"
+        onclick="publishProject()"
+      >
+        Publish Project
+      </button>
+
+
+      <button
+        class="admin-btn admin-dark"
+        onclick="resetProjectForm()"
+      >
+        Clear Form
+      </button>
+
+
+      <button
+        class="admin-btn"
+        style="background:#fff;border:1px solid var(--border)"
+        onclick="closeAdmin()"
+      >
+        Close
+      </button>
+
+
+      <button
+        class="admin-btn admin-delete"
+        onclick="logoutAdmin()"
+      >
+        Log Out
+      </button>
+
+    </div>
+
+
     <div class="admin-box">
-      <div class="section-kicker">Project Editor</div>
-      <div class="admin-form">
-        <input class="admin-input" id="aName" placeholder="Project name">
-        <input class="admin-input" id="aLocation" placeholder="Location">
-        <input class="admin-input" id="aPrice" placeholder="Starting price">
-        <input class="admin-input" id="aPlan" placeholder="Payment plan">
-        <textarea class="admin-input admin-full" id="aDescription" placeholder="Short description" style="min-height:100px;resize:vertical"></textarea>
-        <input class="admin-file admin-full" id="aFile" type="file" accept="image/*">
-        <img class="admin-preview admin-full" id="aPreview" alt="Image preview">
-        <input class="admin-input admin-full" id="aUrl" placeholder="Or paste an image URL">
+
+      <div class="section-kicker">
+        Project Editor
       </div>
-      <p class="admin-note">Upload an image from your phone/computer, enter the project details, then tap Publish Project. This static version stores projects in this browser only.</p>
+
+
+      <div class="admin-form">
+
+
+        <input
+          class="admin-input"
+          id="aName"
+          placeholder="Project name"
+        >
+
+
+        <input
+          class="admin-input"
+          id="aLocation"
+          placeholder="Location"
+        >
+
+
+        <input
+          class="admin-input"
+          id="aPrice"
+          placeholder="Starting price"
+        >
+
+
+        <input
+          class="admin-input"
+          id="aPlan"
+          placeholder="Payment plan"
+        >
+
+
+        <textarea
+          class="admin-input admin-full"
+          id="aDescription"
+          placeholder="Short description"
+          style="min-height:100px;resize:vertical"
+        ></textarea>
+
+
+        <input
+          class="admin-file admin-full"
+          id="aFile"
+          type="file"
+          accept="image/*"
+        >
+
+
+        <img
+          class="admin-preview admin-full"
+          id="aPreview"
+          alt="Image preview"
+        >
+
+
+        <input
+          class="admin-input admin-full"
+          id="aUrl"
+          placeholder="Or paste an image URL"
+        >
+
+      </div>
+
+
+      <p class="admin-note">
+        Upload an image from your phone/computer, enter
+        the project details, then tap Publish Project.
+        This static version stores projects in this browser only.
+      </p>
+
     </div>
+
+
     <div class="admin-box">
-      <div class="section-kicker">Current Projects</div>
+
+      <div class="section-kicker">
+        Current Projects
+      </div>
+
+
       <div id="adminList"></div>
+
     </div>
+
   </div>
+
 </section>
-<div class="admin-login" id="adminLogin">
+
+
+<!-- ADMIN LOGIN -->
+
+<div
+  class="admin-login"
+  id="adminLogin"
+>
+
   <div class="login-card">
-    <div class="section-kicker">ELLKA Admin</div>
-    <h2>Sign in.</h2>
-    <p>Admin access for this website.</p>
-    <input class="admin-input" id="adminPass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')loginAdmin()">
-    <div class="login-error" id="adminError"></div>
-    <button class="admin-btn admin-primary" style="width:100%" onclick="loginAdmin()">Log In</button>
-    <button class="admin-btn" style="width:100%;margin-top:9px;background:#fff;border:1px solid var(--border)" onclick="closeLogin()">Cancel</button>
+
+
+    <div class="section-kicker">
+      ELLKA Admin
+    </div>
+
+
+    <h2>
+      Sign in.
+    </h2>
+
+
+    <p>
+      Admin access for this website.
+    </p>
+
+
+    <input
+      class="admin-input"
+      id="adminPass"
+      type="password"
+      placeholder="Password"
+      onkeydown="if(event.key==='Enter')loginAdmin()"
+    >
+
+
+    <div
+      class="login-error"
+      id="adminError"
+    ></div>
+
+
+    <button
+      class="admin-btn admin-primary"
+      style="width:100%"
+      onclick="loginAdmin()"
+    >
+      Log In
+    </button>
+
+
+    <button
+      class="admin-btn"
+      style="width:100%;margin-top:9px;background:#fff;border:1px solid var(--border)"
+      onclick="closeLogin()"
+    >
+      Cancel
+    </button>
+
   </div>
+
 </div>
 
-<footer>© 2026 <strong>ELLKA</strong>. Real Estate & Investment.</footer>
+
+<!-- FOOTER -->
+
+<footer>
+
+  © 2026 <strong>ELLKA</strong>.
+  Real Estate & Investment.
+
+</footer>
+
 
 <script>
+
+/* MOBILE MENU */
+
 function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("active");
+
+  document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
 }
-document.querySelectorAll(".nav-links a").forEach(a=>{
-  a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("active"));
-});
+
+
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(a=>{
+
+    a.addEventListener("click",()=>{
+
+      document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+  });
+
 </script>
 
+
 <script>
-const ELLKA_DEFAULT_PROJECTS=[
- {id:1,name:'Bahria Sky 1',location:'Bahria Orchard Phase 4, Lahore',price:'Contact for pricing',plan:'Contact ELLKA',image:'bahria-sky-1.png',description:'A current development opportunity presented through ELLKA in association with OZ Developers.'},
- {id:2,name:'Bahria Sky 2',location:'Bahria Orchard Phase 4, Lahore',price:'Contact for pricing',plan:'Contact ELLKA',image:'bahria-sky-2.jpg',description:'A current development opportunity presented through ELLKA. Contact us for current details.'}
+
+/* DEFAULT PROJECTS */
+
+const ELLKA_DEFAULT_PROJECTS = [
+
+  {
+    id:1,
+    name:'Bahria Sky 1',
+    location:'Bahria Orchard Phase 4, Lahore',
+    price:'Contact for pricing',
+    plan:'Contact ELLKA',
+    image:'file_0000000053e88211a2e6721990e56bae.png',
+    description:'A current development opportunity presented through ELLKA in association with OZ Developers.'
+  },
+
+
+  {
+    id:2,
+    name:'Bahria Sky 2',
+    location:'Bahria Orchard Phase 4, Lahore',
+    price:'Contact for pricing',
+    plan:'Payment plan available',
+    image:'file_000000007fec8211ba2c4f8ef408c.png',
+    description:'A featured development opportunity presented through ELLKA. Contact us for current details.'
+  }
+
 ];
-let ellkaProjects=JSON.parse(localStorage.getItem('ellkaProjects'))||ELLKA_DEFAULT_PROJECTS;
-let editId=null, uploadedImage='';
-function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
-function saveProjects(){localStorage.setItem('ellkaProjects',JSON.stringify(ellkaProjects));}
-function renderProjects(){
- const grid=document.querySelector('.project-grid'); if(!grid)return; grid.innerHTML='';
- ellkaProjects.forEach((p,i)=>{const card=document.createElement('article');card.className='project-card';card.innerHTML=`<div class="project-image"><img src="${p.image}" alt="${esc(p.name)}"><div class="project-number">${String(i+1).padStart(2,'0')}</div></div><div class="project-content"><h3>${esc(p.name)}</h3><div class="location">${esc(p.location)}</div><div class="project-info"><div><span class="info-label">Starting Price</span><span class="info-value">${esc(p.price)}</span></div><div><span class="info-label">Payment Plan</span><span class="info-value">${esc(p.plan)}</span></div></div><p class="project-description">${esc(p.description)}</p><a class="project-link" href="#contact">View Details →</a></div>`;grid.appendChild(card);});
- renderAdminList();
+
+
+let ellkaProjects =
+  JSON.parse(
+    localStorage.getItem('ellkaProjects')
+  )
+  || ELLKA_DEFAULT_PROJECTS;
+
+
+let editId = null;
+let uploadedImage = '';
+
+
+/* ESCAPE HTML */
+
+function esc(v){
+
+  return String(v ?? '')
+    .replace(
+      /[&<>"']/g,
+      m=>({
+
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        "'":'&#039;'
+
+      }[m])
+    );
+
 }
-function renderAdminList(){const box=document.getElementById('adminList');if(!box)return;box.innerHTML='';ellkaProjects.forEach(p=>{const row=document.createElement('div');row.className='admin-row';row.innerHTML=`<div class="admin-row-left"><img class="admin-thumb" src="${p.image}" alt=""><div><strong>${esc(p.name)}</strong><br><small>${esc(p.location)}</small></div></div><div class="admin-actions"><button class="admin-btn admin-dark" onclick="editProject(${p.id})">Edit</button><button class="admin-btn admin-delete" onclick="deleteProject(${p.id})">Delete</button></div>`;box.appendChild(row);});}
-function publishProject(){const name=document.getElementById('aName').value.trim(),location=document.getElementById('aLocation').value.trim();if(!name||!location){alert('Project name and location are required.');return;}const p={id:editId??Date.now(),name,location,price:document.getElementById('aPrice').value.trim()||'Contact for pricing',plan:document.getElementById('aPlan').value.trim()||'Contact ELLKA',description:document.getElementById('aDescription').value.trim()||'Real estate opportunity presented through ELLKA.',image:uploadedImage||document.getElementById('aUrl').value.trim()||'bahria-sky-1.png'};if(editId===null)ellkaProjects.push(p);else ellkaProjects=ellkaProjects.map(x=>x.id===editId?p:x);saveProjects();renderProjects();resetProjectForm();alert(editId===null?'Project published successfully.':'Project updated successfully.');}
-function editProject(id){const p=ellkaProjects.find(x=>x.id===id);if(!p)return;editId=id;uploadedImage='';document.getElementById('aName').value=p.name;document.getElementById('aLocation').value=p.location;document.getElementById('aPrice').value=p.price;document.getElementById('aPlan').value=p.plan;document.getElementById('aDescription').value=p.description;document.getElementById('aUrl').value=p.image.startsWith('data:')?'':p.image;const pr=document.getElementById('aPreview');pr.src=p.image;pr.style.display='block';document.getElementById('admin').scrollIntoView({behavior:'smooth'});}
-function deleteProject(id){if(!confirm('Delete this project?'))return;ellkaProjects=ellkaProjects.filter(p=>p.id!==id);saveProjects();renderProjects();}
-function resetProjectForm(){editId=null;uploadedImage='';['aName','aLocation','aPrice','aPlan','aDescription','aUrl'].forEach(id=>document.getElementById(id).value='');document.getElementById('aFile').value='';document.getElementById('aPreview').style.display='none';}
-document.getElementById('aFile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;if(f.size>5*1024*1024){alert('Use an image under 5 MB.');e.target.value='';return;}const r=new FileReader();r.onload=()=>{uploadedImage=r.result;const p=document.getElementById('aPreview');p.src=uploadedImage;p.style.display='block'};r.readAsDataURL(f);});
-function openLogin(){document.getElementById('adminLogin').classList.add('active');document.getElementById('adminPass').focus();}
-function closeLogin(){document.getElementById('adminLogin').classList.remove('active');document.getElementById('adminError').textContent='';}
-function loginAdmin(){const pass=document.getElementById('adminPass').value;if(pass!=='ELLKA2026'){document.getElementById('adminError').textContent='Incorrect password.';return;}sessionStorage.setItem('ellkaAdmin','1');closeLogin();openAdminPanel();}
-function openAdmin(){if(sessionStorage.getItem('ellkaAdmin')==='1')openAdminPanel();else openLogin();}
-function openAdminPanel(){document.getElementById('admin').classList.add('active');renderAdminList();document.getElementById('admin').scrollIntoView({behavior:'smooth'});}
-function closeAdmin(){document.getElementById('admin').classList.remove('active');}
-function logoutAdmin(){sessionStorage.removeItem('ellkaAdmin');closeAdmin();}
+
+
+/* SAVE PROJECTS */
+
+function saveProjects(){
+
+  localStorage.setItem(
+    'ellkaProjects',
+    JSON.stringify(ellkaProjects)
+  );
+
+}
+
+
+/* RENDER PROJECTS */
+
+function renderProjects(){
+
+  const grid =
+    document.querySelector('.project-grid');
+
+  if(!grid)return;
+
+  grid.innerHTML = '';
+
+
+  ellkaProjects.forEach((p,i)=>{
+
+    const card =
+      document.createElement('article');
+
+
+    card.className =
+      'project-card';
+
+
+    card.innerHTML = `
+
+      <div class="project-image">
+
+        <img
+          src="${p.image}"
+          alt="${esc(p.name)}"
+        >
+
+        <div class="project-number">
+          ${String(i+1).padStart(2,'0')}
+        </div>
+
+      </div>
+
+
+      <div class="project-content">
+
+        <h3>
+          ${esc(p.name)}
+        </h3>
+
+
+        <div class="location">
+          ${esc(p.location)}
+        </div>
+
+
+        <div class="project-info">
+
+          <div>
+
+            <span class="info-label">
+              Starting Price
+            </span>
+
+            <span class="info-value">
+              ${esc(p.price)}
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <span class="info-label">
+              Payment Plan
+            </span>
+
+            <span class="info-value">
+              ${esc(p.plan)}
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <p class="project-description">
+          ${esc(p.description)}
+        </p>
+
+
+        <a
+          class="project-link"
+          href="#contact"
+        >
+          View Details →
+        </a>
+
+      </div>
+
+    `;
+
+
+    grid.appendChild(card);
+
+  });
+
+
+  renderAdminList();
+
+}
+
+
+/* ADMIN PROJECT LIST */
+
+function renderAdminList(){
+
+  const box =
+    document.getElementById('adminList');
+
+  if(!box)return;
+
+  box.innerHTML = '';
+
+
+  ellkaProjects.forEach(p=>{
+
+    const row =
+      document.createElement('div');
+
+
+    row.className =
+      'admin-row';
+
+
+    row.innerHTML = `
+
+      <div class="admin-row-left">
+
+        <img
+          class="admin-thumb"
+          src="${p.image}"
+          alt=""
+        >
+
+
+        <div>
+
+          <strong>
+            ${esc(p.name)}
+          </strong>
+
+          <br>
+
+          <small>
+            ${esc(p.location)}
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="admin-actions">
+
+        <button
+          class="admin-btn admin-dark"
+          onclick="editProject(${p.id})"
+        >
+          Edit
+        </button>
+
+
+        <button
+          class="admin-btn admin-delete"
+          onclick="deleteProject(${p.id})"
+        >
+          Delete
+        </button>
+
+      </div>
+
+    `;
+
+
+    box.appendChild(row);
+
+  });
+
+}
+
+
+/* PUBLISH PROJECT */
+
+function publishProject(){
+
+  const name =
+    document
+      .getElementById('aName')
+      .value
+      .trim();
+
+
+  const location =
+    document
+      .getElementById('aLocation')
+      .value
+      .trim();
+
+
+  if(!name || !location){
+
+    alert(
+      'Project name and location are required.'
+    );
+
+    return;
+
+  }
+
+
+  const wasEditing =
+    editId !== null;
+
+
+  const p = {
+
+    id:
+      editId ?? Date.now(),
+
+
+    name,
+
+
+    location,
+
+
+    price:
+      document
+        .getElementById('aPrice')
+        .value
+        .trim()
+        ||
+        'Contact for pricing',
+
+
+    plan:
+      document
+        .getElementById('aPlan')
+        .value
+        .trim()
+        ||
+        'Contact ELLKA',
+
+
+    description:
+      document
+        .getElementById('aDescription')
+        .value
+        .trim()
+        ||
+        'Real estate opportunity presented through ELLKA.',
+
+
+    image:
+      uploadedImage
+      ||
+      document
+        .getElementById('aUrl')
+        .value
+        .trim()
+      ||
+      'file_0000000053e88211a2e6721990e56bae.png'
+
+  };
+
+
+  if(editId === null){
+
+    ellkaProjects.push(p);
+
+  }else{
+
+    ellkaProjects =
+      ellkaProjects.map(
+        x=>x.id === editId ? p : x
+      );
+
+  }
+
+
+  saveProjects();
+
+  renderProjects();
+
+  resetProjectForm();
+
+
+  alert(
+    wasEditing
+      ? 'Project updated successfully.'
+      : 'Project published successfully.'
+  );
+
+}
+
+
+/* EDIT PROJECT */
+
+function editProject(id){
+
+  const p =
+    ellkaProjects.find(
+      x=>x.id === id
+    );
+
+
+  if(!p)return;
+
+
+  editId = id;
+
+  uploadedImage = '';
+
+
+  document.getElementById('aName').value =
+    p.name;
+
+
+  document.getElementById('aLocation').value =
+    p.location;
+
+
+  document.getElementById('aPrice').value =
+    p.price;
+
+
+  document.getElementById('aPlan').value =
+    p.plan;
+
+
+  document.getElementById('aDescription').value =
+    p.description;
+
+
+  document.getElementById('aUrl').value =
+    p.image.startsWith('data:')
+      ? ''
+      : p.image;
+
+
+  const preview =
+    document.getElementById('aPreview');
+
+
+  preview.src =
+    p.image;
+
+
+  preview.style.display =
+    'block';
+
+
+  document
+    .getElementById('admin')
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
+}
+
+
+/* DELETE PROJECT */
+
+function deleteProject(id){
+
+  if(
+    !confirm(
+      'Delete this project?'
+    )
+  ){
+
+    return;
+
+  }
+
+
+  ellkaProjects =
+    ellkaProjects.filter(
+      p=>p.id !== id
+    );
+
+
+  saveProjects();
+
+  renderProjects();
+
+}
+
+
+/* RESET FORM */
+
+function resetProjectForm(){
+
+  editId = null;
+
+  uploadedImage = '';
+
+
+  [
+    'aName',
+    'aLocation',
+    'aPrice',
+    'aPlan',
+    'aDescription',
+    'aUrl'
+  ]
+  .forEach(id=>{
+
+    document
+      .getElementById(id)
+      .value='';
+
+  });
+
+
+  document
+    .getElementById('aFile')
+    .value='';
+
+
+  document
+    .getElementById('aPreview')
+    .style
+    .display='none';
+
+}
+
+
+/* IMAGE UPLOAD */
+
+document
+  .getElementById('aFile')
+  .addEventListener(
+    'change',
+    e=>{
+
+      const f =
+        e.target.files[0];
+
+
+      if(!f)return;
+
+
+      if(
+        f.size >
+        5 * 1024 * 1024
+      ){
+
+        alert(
+          'Use an image under 5 MB.'
+        );
+
+
+        e.target.value='';
+
+
+        return;
+
+      }
+
+
+      const reader =
+        new FileReader();
+
+
+      reader.onload = ()=>{
+
+        uploadedImage =
+          reader.result;
+
+
+        const preview =
+          document.getElementById(
+            'aPreview'
+          );
+
+
+        preview.src =
+          uploadedImage;
+
+
+        preview.style.display =
+          'block';
+
+      };
+
+
+      reader.readAsDataURL(f);
+
+    }
+  );
+
+
+/* LOGIN */
+
+function openLogin(){
+
+  document
+    .getElementById('adminLogin')
+    .classList
+    .add('active');
+
+
+  document
+    .getElementById('adminPass')
+    .focus();
+
+}
+
+
+function closeLogin(){
+
+  document
+    .getElementById('adminLogin')
+    .classList
+    .remove('active');
+
+
+  document
+    .getElementById('adminError')
+    .textContent='';
+
+}
+
+
+function loginAdmin(){
+
+  const pass =
+    document
+      .getElementById('adminPass')
+      .value;
+
+
+  if(
+    pass !== 'ELLKA2026'
+  ){
+
+    document
+      .getElementById('adminError')
+      .textContent =
+      'Incorrect password.';
+
+
+    return;
+
+  }
+
+
+  sessionStorage.setItem(
+    'ellkaAdmin',
+    '1'
+  );
+
+
+  closeLogin();
+
+  openAdminPanel();
+
+}
+
+
+/* OPEN ADMIN */
+
+function openAdmin(){
+
+  if(
+    sessionStorage.getItem(
+      'ellkaAdmin'
+    ) === '1'
+  ){
+
+    openAdminPanel();
+
+  }else{
+
+    openLogin();
+
+  }
+
+}
+
+
+/* ADMIN PANEL */
+
+function openAdminPanel(){
+
+  document
+    .getElementById('admin')
+    .classList
+    .add('active');
+
+
+  renderAdminList();
+
+
+  document
+    .getElementById('admin')
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
+}
+
+
+/* CLOSE ADMIN */
+
+function closeAdmin(){
+
+  document
+    .getElementById('admin')
+    .classList
+    .remove('active');
+
+}
+
+
+/* LOGOUT */
+
+function logoutAdmin(){
+
+  sessionStorage.removeItem(
+    'ellkaAdmin'
+  );
+
+
+  closeAdmin();
+
+}
+
+
+/* INITIAL LOAD */
+
 renderProjects();
+
 </script>
 
 </body>
