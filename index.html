@@ -17,11 +17,6 @@ content="ELLKA — Real Estate & Investment. Selected property opportunities in 
 
 <style>
 
-/* =========================================================
-   ELLKA
-   PREMIUM REAL ESTATE WEBSITE
-========================================================= */
-
 :root{
     --black:#080b0a;
     --black2:#101412;
@@ -59,9 +54,7 @@ button{
     font-family:inherit;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* ================= HEADER ================= */
 
 .header{
     position:fixed;
@@ -90,7 +83,6 @@ button{
     max-width:var(--max);
     margin:auto;
     height:82px;
-
     padding:0 28px;
 
     display:flex;
@@ -98,25 +90,28 @@ button{
     justify-content:space-between;
 }
 
-/* =========================================================
-   LOGO
-========================================================= */
+/* ================= LOGO ================= */
 
 .logo{
     display:flex;
     align-items:center;
     width:145px;
+    height:auto;
 }
 
 .logo img{
+    display:block;
     width:100%;
     height:auto;
-    display:block;
+    max-height:65px;
+    object-fit:contain;
+
+    /* IMPORTANT:
+       No background is added here.
+       The PNG itself must contain transparency. */
 }
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* ================= NAV ================= */
 
 .nav{
     display:flex;
@@ -144,7 +139,6 @@ button{
 
 .menu{
     display:none;
-
     width:45px;
     height:45px;
 
@@ -156,9 +150,7 @@ button{
     cursor:pointer;
 }
 
-/* =========================================================
-   HERO
-========================================================= */
+/* ================= HERO ================= */
 
 .hero{
     min-height:100svh;
@@ -167,8 +159,6 @@ button{
     display:flex;
     align-items:flex-end;
 }
-
-/* SLIDER */
 
 .slider{
     position:absolute;
@@ -209,8 +199,6 @@ button{
     transform:scale(1);
 }
 
-/* IMAGE DARKENING */
-
 .slide::after{
     content:"";
     position:absolute;
@@ -223,7 +211,6 @@ button{
             rgba(5,8,7,.53) 38%,
             rgba(5,8,7,.08) 75%
         ),
-
         linear-gradient(
             to top,
             rgba(5,8,7,.88) 0%,
@@ -232,9 +219,7 @@ button{
         );
 }
 
-/* =========================================================
-   HERO CONTENT
-========================================================= */
+/* ================= HERO CONTENT ================= */
 
 .hero-content{
     position:relative;
@@ -284,7 +269,6 @@ button{
     letter-spacing:-2px;
 
     max-width:680px;
-
     margin-bottom:20px;
 }
 
@@ -303,9 +287,7 @@ button{
     margin-bottom:27px;
 }
 
-/* =========================================================
-   BUTTONS
-========================================================= */
+/* ================= BUTTONS ================= */
 
 .hero-actions{
     display:flex;
@@ -357,13 +339,10 @@ button{
     color:#111;
 }
 
-/* =========================================================
-   SLIDER CONTROLS
-========================================================= */
+/* ================= SLIDER CONTROLS ================= */
 
 .slider-controls{
     position:absolute;
-
     z-index:20;
 
     right:28px;
@@ -384,7 +363,6 @@ button{
     backdrop-filter:blur(10px);
 
     color:white;
-
     cursor:pointer;
 
     display:flex;
@@ -392,7 +370,6 @@ button{
     justify-content:center;
 
     font-size:17px;
-
     transition:.25s;
 }
 
@@ -412,13 +389,10 @@ button{
     letter-spacing:2px;
 }
 
-/* =========================================================
-   PROJECT META
-========================================================= */
+/* ================= PROJECT META ================= */
 
 .project-meta{
     position:absolute;
-
     z-index:10;
 
     right:28px;
@@ -451,13 +425,10 @@ button{
     font-weight:600;
 }
 
-/* =========================================================
-   360 TOUR BUTTON
-========================================================= */
+/* ================= TOUR BUTTON ================= */
 
 .tour-button{
     position:fixed;
-
     z-index:900;
 
     right:22px;
@@ -508,9 +479,7 @@ button{
     font-size:9px;
 }
 
-/* =========================================================
-   ABOUT
-========================================================= */
+/* ================= ABOUT ================= */
 
 .about{
     background:var(--black);
@@ -589,9 +558,7 @@ button{
     font-weight:600;
 }
 
-/* =========================================================
-   PROJECTS
-========================================================= */
+/* ================= PROJECTS ================= */
 
 .projects{
     background:#0d110f;
@@ -626,10 +593,6 @@ button{
     font-size:13px;
     line-height:1.7;
 }
-
-/* =========================================================
-   PROJECT CARDS
-========================================================= */
 
 .project-grid{
     display:grid;
@@ -728,9 +691,7 @@ button{
     text-transform:uppercase;
 }
 
-/* =========================================================
-   CONTACT
-========================================================= */
+/* ================= CONTACT ================= */
 
 .contact{
     padding:105px 24px 80px;
@@ -791,9 +752,7 @@ button{
     transform:translateY(-2px);
 }
 
-/* =========================================================
-   SOCIALS
-========================================================= */
+/* ================= SOCIALS ================= */
 
 .socials{
     display:flex;
@@ -831,9 +790,7 @@ button{
     transform:translateY(-3px);
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* ================= FOOTER ================= */
 
 .footer{
     border-top:1px solid var(--line);
@@ -852,9 +809,7 @@ button{
     color:var(--gold);
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:800px){
 
@@ -906,8 +861,6 @@ button{
         justify-content:center;
     }
 
-    /* HERO */
-
     .hero{
         min-height:100svh;
     }
@@ -953,11 +906,8 @@ button{
     .tour-button{
         right:15px;
         bottom:15px;
-
         padding:10px 13px;
     }
-
-    /* ABOUT */
 
     .about{
         padding:75px 22px;
@@ -971,8 +921,6 @@ button{
     .about h2{
         font-size:46px;
     }
-
-    /* PROJECTS */
 
     .projects{
         padding:75px 18px;
@@ -1006,8 +954,6 @@ button{
         font-size:34px;
     }
 
-    /* CONTACT */
-
     .contact{
         padding:80px 22px 65px;
     }
@@ -1020,10 +966,6 @@ button{
         margin-top:50px;
     }
 }
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
 
 @media(max-width:390px){
 
@@ -1054,44 +996,23 @@ button{
     }
 }
 
-/* =========================================================
-   REVEAL ANIMATION
-========================================================= */
-
-.reveal{
-    opacity:0;
-    transform:translateY(25px);
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.reveal.visible{
-    opacity:1;
-    transform:translateY(0);
-}
-
 </style>
 </head>
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- ================= HEADER ================= -->
 
 <header class="header" id="header">
 
     <div class="header-inner">
 
+        <!-- TRANSPARENT ELLKA LOGO -->
         <a href="#home" class="logo">
-
             <img
                 src="Untitled design.png"
                 alt="ELLKA Real Estate & Investment"
             >
-
         </a>
 
         <button
@@ -1104,22 +1025,13 @@ button{
 
         <nav class="nav" id="nav">
 
-            <a href="#home">
-                Home
-            </a>
+            <a href="#home">Home</a>
 
-            <a href="#projects">
-                Projects
-            </a>
+            <a href="#projects">Projects</a>
 
-            <a href="#about">
-                About
-            </a>
+            <a href="#about">About</a>
 
-            <a
-                href="#contact"
-                class="nav-contact"
-            >
+            <a href="#contact" class="nav-contact">
                 Contact
             </a>
 
@@ -1130,9 +1042,7 @@ button{
 </header>
 
 
-<!-- =====================================================
-     HERO / PROJECT SLIDER
-===================================================== -->
+<!-- ================= HERO ================= -->
 
 <main>
 
@@ -1140,11 +1050,7 @@ button{
 
     <div class="slider">
 
-
-        <!-- =================================================
-             SLIDE 1 — BAHRIA SKY 2
-        ================================================== -->
-
+        <!-- BAHRIA SKY 2 -->
         <div class="slide active">
 
             <img
@@ -1156,10 +1062,7 @@ button{
         </div>
 
 
-        <!-- =================================================
-             SLIDE 2 — BAHRIA SKY 1
-        ================================================== -->
-
+        <!-- BAHRIA SKY 1 -->
         <div class="slide">
 
             <img
@@ -1173,27 +1076,17 @@ button{
     </div>
 
 
-    <!-- =================================================
-         HERO TEXT
-    ================================================== -->
-
     <div class="hero-content">
 
-        <div class="eyebrow" id="heroEyebrow">
+        <div class="eyebrow">
             Signature Project
         </div>
 
-        <h1
-            class="hero-title"
-            id="heroTitle"
-        >
+        <h1 class="hero-title" id="heroTitle">
             Bahria Sky <span>2</span>
         </h1>
 
-        <p
-            class="hero-description"
-            id="heroDescription"
-        >
+        <p class="hero-description" id="heroDescription">
             A contemporary development opportunity in Bahria
             Orchard, Lahore. Explore the project and request
             current information directly from ELLKA.
@@ -1221,10 +1114,6 @@ button{
 
     </div>
 
-
-    <!-- =================================================
-         PROJECT META
-    ================================================== -->
 
     <div class="project-meta">
 
@@ -1255,10 +1144,6 @@ button{
     </div>
 
 
-    <!-- =================================================
-         SLIDER CONTROLS
-    ================================================== -->
-
     <div class="slider-controls">
 
         <button
@@ -1270,14 +1155,8 @@ button{
         </button>
 
         <div class="counter">
-
-            <span id="current">
-                01
-            </span>
-
-            /
-            02
-
+            <span id="current">01</span>
+            / 02
         </div>
 
         <button
@@ -1293,14 +1172,9 @@ button{
 </section>
 
 
-<!-- =====================================================
-     ABOUT ELLKA
-===================================================== -->
+<!-- ================= ABOUT ================= -->
 
-<section
-    class="about reveal"
-    id="about"
->
+<section class="about" id="about">
 
     <div class="about-inner">
 
@@ -1311,23 +1185,15 @@ button{
             </div>
 
             <h2>
-
-                Less noise.
-                <br>
-
-                <span>
-                    Better decisions.
-                </span>
-
+                Less noise.<br>
+                <span>Better decisions.</span>
             </h2>
 
             <p class="about-text">
-
                 ELLKA is a real estate and investment company
                 established in 2025, focused on presenting
                 selected property opportunities with clear,
                 useful information.
-
             </p>
 
         </div>
@@ -1347,7 +1213,6 @@ button{
 
             </div>
 
-
             <div class="fact">
 
                 <span>
@@ -1359,7 +1224,6 @@ button{
                 </span>
 
             </div>
-
 
             <div class="fact">
 
@@ -1380,14 +1244,9 @@ button{
 </section>
 
 
-<!-- =====================================================
-     PROJECTS
-===================================================== -->
+<!-- ================= PROJECTS ================= -->
 
-<section
-    class="projects reveal"
-    id="projects"
->
+<section class="projects" id="projects">
 
     <div class="projects-inner">
 
@@ -1406,11 +1265,9 @@ button{
             </div>
 
             <p class="projects-intro">
-
                 Explore current opportunities presented through
                 ELLKA. Availability and project information may
                 change, so contact us for current details.
-
             </p>
 
         </div>
@@ -1419,16 +1276,13 @@ button{
         <div class="project-grid">
 
 
-            <!-- =================================================
-                 BAHRIA SKY 2
-            ================================================== -->
+            <!-- BAHRIA SKY 2 -->
 
             <article class="project-card">
 
                 <img
                     src="bahria-sky2.png"
                     alt="Bahria Sky 2"
-                    loading="lazy"
                 >
 
                 <div class="project-card-content">
@@ -1459,16 +1313,13 @@ button{
             </article>
 
 
-            <!-- =================================================
-                 BAHRIA SKY 1
-            ================================================== -->
+            <!-- BAHRIA SKY 1 -->
 
             <article class="project-card">
 
                 <img
                     src="file_0000000053e88211a2e6721990e56bae.png"
                     alt="Bahria Sky 1"
-                    loading="lazy"
                 >
 
                 <div class="project-card-content">
@@ -1503,14 +1354,9 @@ button{
 </section>
 
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
+<!-- ================= CONTACT ================= -->
 
-<section
-    class="contact reveal"
-    id="contact"
->
+<section class="contact" id="contact">
 
     <div class="contact-inner">
 
@@ -1519,21 +1365,13 @@ button{
         </div>
 
         <h2>
-
-            Let's discuss your
-            <br>
-
-            <span>
-                next property move.
-            </span>
-
+            Let's discuss your<br>
+            <span>next property move.</span>
         </h2>
 
         <p>
-
             Ask about a project, request current information,
             or simply start a conversation with ELLKA.
-
         </p>
 
         <a
@@ -1546,14 +1384,7 @@ button{
         </a>
 
 
-        <!-- =================================================
-             SOCIAL MEDIA
-        ================================================== -->
-
         <div class="socials">
-
-
-            <!-- FACEBOOK -->
 
             <a
                 class="social"
@@ -1561,41 +1392,29 @@ button{
                 target="_blank"
                 rel="noopener"
                 aria-label="ELLKA Facebook"
-                title="Facebook"
             >
                 f
             </a>
 
-
-            <!-- INSTAGRAM -->
-
             <a
                 class="social"
-                href="https://www.instagram.com/ellkaainc?igsi=MTBncW1udXR6cnJyNA=="
+                href="https://www.instagram.com/ellkaainc"
                 target="_blank"
                 rel="noopener"
                 aria-label="ELLKA Instagram"
-                title="Instagram"
             >
                 ◎
             </a>
 
-
-            <!-- IMO -->
-
             <a
                 class="social"
-                href="https://profile.imo.im/profileshare/shr.AAAAAAAAAAAAAAAAAAAAAH3QfwgkSjA1VHerPuUdZHQC-jYfjwBCotKKb5k2Nr10"
+                href="https://profile.imo.im/"
                 target="_blank"
                 rel="noopener"
                 aria-label="ELLKA IMO"
-                title="IMO"
             >
                 i
             </a>
-
-
-            <!-- THREADS -->
 
             <a
                 class="social"
@@ -1603,7 +1422,6 @@ button{
                 target="_blank"
                 rel="noopener"
                 aria-label="ELLKA Threads"
-                title="Threads"
             >
                 @
             </a>
@@ -1617,9 +1435,7 @@ button{
 </main>
 
 
-<!-- =====================================================
-     FLOATING 360 BUTTON
-===================================================== -->
+<!-- ================= FLOATING TOUR ================= -->
 
 <a
     href="https://virtual-tour.ozdevelopers.com/"
@@ -1627,28 +1443,17 @@ button{
     rel="noopener"
     class="tour-button"
 >
-
-    <span class="tour-icon">
-        360
-    </span>
-
+    <span class="tour-icon">360</span>
     Live 360° View
-
 </a>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= FOOTER ================= -->
 
 <footer class="footer">
 
     © 2026
-
-    <strong>
-        ELLKA
-    </strong>
-
+    <strong>ELLKA</strong>
     — Real Estate & Investment
 
 </footer>
@@ -1656,9 +1461,7 @@ button{
 
 <script>
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+/* ================= MOBILE MENU ================= */
 
 const menuButton =
     document.getElementById("menuButton");
@@ -1666,34 +1469,27 @@ const menuButton =
 const nav =
     document.getElementById("nav");
 
-
 menuButton.addEventListener("click", () => {
 
     nav.classList.toggle("open");
 
 });
 
+document.querySelectorAll(".nav a").forEach(link => {
 
-document
-    .querySelectorAll(".nav a")
-    .forEach(link => {
+    link.addEventListener("click", () => {
 
-        link.addEventListener("click", () => {
-
-            nav.classList.remove("open");
-
-        });
+        nav.classList.remove("open");
 
     });
 
+});
 
-/* =========================================================
-   HEADER SCROLL
-========================================================= */
+
+/* ================= HEADER SCROLL ================= */
 
 const header =
     document.getElementById("header");
-
 
 window.addEventListener("scroll", () => {
 
@@ -1710,107 +1506,74 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* =========================================================
-   PROJECT SLIDER
-========================================================= */
+/* ================= SLIDER ================= */
 
 const slides =
     document.querySelectorAll(".slide");
 
-
 const currentNumber =
     document.getElementById("current");
-
 
 const heroTitle =
     document.getElementById("heroTitle");
 
-
 const heroDescription =
     document.getElementById("heroDescription");
-
 
 let currentSlide = 0;
 
 
-/* =========================================================
-   PROJECT DATA
-========================================================= */
+/* PROJECT DATA */
 
 const projectData = [
 
     {
-
-        title:
-        'Bahria Sky <span>2</span>',
+        title:"Bahria Sky <span>2</span>",
 
         description:
-        'A contemporary development opportunity in Bahria Orchard, Lahore. Explore the project and request current information directly from ELLKA.'
-
+        "A contemporary development opportunity in Bahria Orchard, Lahore. Explore the project and request current information directly from ELLKA."
     },
 
     {
-
-        title:
-        'Bahria Sky <span>1</span>',
+        title:"Bahria Sky <span>1</span>",
 
         description:
-        'A featured development opportunity in Bahria Orchard, Lahore. Contact ELLKA for current project information and availability.'
-
+        "A featured development opportunity in Bahria Orchard, Lahore. Contact ELLKA for current project information and availability."
     }
 
 ];
 
 
-/* =========================================================
-   SHOW SLIDE
-========================================================= */
-
 function showSlide(index){
 
     if(index >= slides.length){
-
         index = 0;
-
     }
 
     if(index < 0){
-
         index = slides.length - 1;
-
     }
 
-
     slides.forEach(slide => {
-
         slide.classList.remove("active");
-
     });
-
 
     slides[index].classList.add("active");
 
-
     currentSlide = index;
-
 
     currentNumber.textContent =
         String(index + 1).padStart(2,"0");
 
-
     heroTitle.innerHTML =
         projectData[index].title;
 
-
     heroDescription.textContent =
         projectData[index].description;
-
 }
 
 
-/* =========================================================
-   NEXT
-========================================================= */
+/* NEXT */
 
 document
     .getElementById("next")
@@ -1821,9 +1584,7 @@ document
     });
 
 
-/* =========================================================
-   PREVIOUS
-========================================================= */
+/* PREVIOUS */
 
 document
     .getElementById("prev")
@@ -1834,54 +1595,41 @@ document
     });
 
 
-/* =========================================================
-   AUTO SLIDE
-========================================================= */
+/* AUTO SLIDE */
 
-let autoSlide =
-    setInterval(() => {
+let autoSlide = setInterval(() => {
 
-        showSlide(currentSlide + 1);
+    showSlide(currentSlide + 1);
 
-    },7000);
+},7000);
 
 
-/* =========================================================
-   RESET AUTO SLIDE
-========================================================= */
+/* RESET AUTO SLIDE */
 
-document
-    .querySelectorAll(".arrow")
-    .forEach(button => {
+document.querySelectorAll(".arrow").forEach(button => {
 
-        button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 
-            clearInterval(autoSlide);
+        clearInterval(autoSlide);
 
+        autoSlide = setInterval(() => {
 
-            autoSlide =
-                setInterval(() => {
+            showSlide(currentSlide + 1);
 
-                    showSlide(currentSlide + 1);
-
-                },7000);
-
-        });
+        },7000);
 
     });
 
+});
 
-/* =========================================================
-   MOBILE SWIPE
-========================================================= */
+
+/* ================= MOBILE SWIPE ================= */
 
 let touchStartX = 0;
 let touchEndX = 0;
 
-
 const hero =
     document.querySelector(".hero");
-
 
 hero.addEventListener("touchstart", e => {
 
@@ -1890,16 +1638,13 @@ hero.addEventListener("touchstart", e => {
 
 });
 
-
 hero.addEventListener("touchend", e => {
 
     touchEndX =
         e.changedTouches[0].screenX;
 
-
     const distance =
         touchStartX - touchEndX;
-
 
     if(Math.abs(distance) > 50){
 
@@ -1918,50 +1663,7 @@ hero.addEventListener("touchend", e => {
 });
 
 
-/* =========================================================
-   REVEAL ANIMATION
-========================================================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const observer =
-    new IntersectionObserver(
-
-        entries => {
-
-            entries.forEach(entry => {
-
-                if(entry.isIntersecting){
-
-                    entry.target
-                        .classList
-                        .add("visible");
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold:.12
-        }
-
-    );
-
-
-revealElements.forEach(element => {
-
-    observer.observe(element);
-
-});
-
-
-/* =========================================================
-   INITIAL SLIDE
-========================================================= */
+/* ================= INITIAL SLIDE ================= */
 
 showSlide(0);
 
