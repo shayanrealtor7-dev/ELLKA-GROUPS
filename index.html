@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,10 +15,11 @@ content="ELLKA — Real Estate & Investment. Selected property opportunities in 
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
 <style>
 
 /* =========================================================
-   ELLKA — CLEAN REAL ESTATE WEBSITE
+   ELLKA — PREMIUM REAL ESTATE WEBSITE
    ========================================================= */
 
 :root{
@@ -72,7 +74,8 @@ img{
     width:100%;
     z-index:1000;
 
-    background:rgba(11,15,13,.78);
+    background:rgba(11,15,13,.80);
+
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
 
@@ -80,26 +83,39 @@ img{
 }
 
 .nav-inner{
-    max-width:1200px;
-    height:76px;
-    margin:auto;
+    max-width:1250px;
+    height:82px;
 
-    padding:0 28px;
+    margin:auto;
+    padding:0 30px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
+
+/* =========================================================
+   ELLKA LOGO
+   ========================================================= */
+
 .logo{
-    height:43px;
+    height:58px;
     width:auto;
 
     object-fit:contain;
 
-    /* Helps if the logo image contains unwanted transparent
-       padding around the actual mark */
+    transition:transform .3s ease;
 }
+
+.logo:hover{
+    transform:scale(1.02);
+}
+
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
 
 .nav-links{
     display:flex;
@@ -110,7 +126,9 @@ img{
 .nav-links a{
     font-size:12px;
     font-weight:600;
+
     color:#c9cec9;
+
     transition:.25s ease;
 }
 
@@ -120,7 +138,9 @@ img{
 
 .nav-cta{
     padding:10px 17px;
+
     border:1px solid rgba(198,161,91,.55);
+
     color:var(--cream)!important;
 }
 
@@ -131,7 +151,9 @@ img{
     height:44px;
 
     border:1px solid rgba(255,255,255,.12);
+
     background:transparent;
+
     color:white;
 
     font-size:22px;
@@ -159,7 +181,6 @@ img{
 .hero-bg{
     position:absolute;
     inset:0;
-    z-index:0;
 
     background:
         radial-gradient(
@@ -186,6 +207,7 @@ img{
     background:rgba(198,161,91,.06);
 
     filter:blur(80px);
+
     border-radius:50%;
 }
 
@@ -193,7 +215,7 @@ img{
     position:relative;
     z-index:2;
 
-    max-width:1200px;
+    max-width:1250px;
     width:100%;
 
     margin:auto;
@@ -202,6 +224,7 @@ img{
 .hero-small{
     display:flex;
     align-items:center;
+
     gap:12px;
 
     color:var(--gold);
@@ -210,6 +233,7 @@ img{
     font-weight:700;
 
     letter-spacing:4px;
+
     text-transform:uppercase;
 
     margin-bottom:20px;
@@ -218,11 +242,13 @@ img{
 .hero-small span{
     width:30px;
     height:1px;
+
     background:var(--gold);
 }
 
 .hero h1{
     font-family:"DM Serif Display",serif;
+
     font-weight:400;
 
     font-size:clamp(48px,7vw,88px);
@@ -255,7 +281,9 @@ img{
 
 .hero-buttons{
     display:flex;
+
     gap:12px;
+
     flex-wrap:wrap;
 
     margin-top:30px;
@@ -263,6 +291,7 @@ img{
 
 .button{
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
 
@@ -288,6 +317,7 @@ img{
 
 .button-outline{
     border:1px solid rgba(255,255,255,.18);
+
     color:var(--cream);
 }
 
@@ -298,22 +328,25 @@ img{
 
 .hero-bottom{
     position:absolute;
+
     bottom:30px;
     right:30px;
 
     color:#727a74;
 
     font-size:10px;
+
     letter-spacing:2px;
 }
 
 
 /* =========================================================
-   SECTION
+   GENERAL SECTIONS
    ========================================================= */
 
 .section{
     max-width:1200px;
+
     margin:auto;
 
     padding:105px 28px;
@@ -334,9 +367,11 @@ img{
 
 .section-title{
     font-family:"DM Serif Display",serif;
+
     font-size:clamp(38px,5vw,60px);
 
     font-weight:400;
+
     line-height:1.08;
 
     color:var(--cream);
@@ -363,6 +398,7 @@ img{
 
 .projects{
     max-width:1200px;
+
     margin:auto;
 
     padding:105px 28px;
@@ -372,6 +408,7 @@ img{
     margin-top:48px;
 
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
 
     gap:22px;
@@ -391,6 +428,7 @@ img{
 
 .project-image{
     position:absolute;
+
     inset:0;
 }
 
@@ -409,13 +447,14 @@ img{
 
 .project-overlay{
     position:absolute;
+
     inset:0;
 
     background:
         linear-gradient(
             180deg,
             rgba(0,0,0,.03) 30%,
-            rgba(0,0,0,.78) 100%
+            rgba(0,0,0,.80) 100%
         );
 }
 
@@ -442,6 +481,7 @@ img{
     font-family:"DM Serif Display",serif;
 
     font-size:38px;
+
     font-weight:400;
 
     color:white;
@@ -457,7 +497,9 @@ img{
 
 .project-link{
     display:inline-flex;
+
     align-items:center;
+
     gap:12px;
 
     margin-top:20px;
@@ -469,6 +511,7 @@ img{
     color:white;
 
     font-size:11px;
+
     font-weight:700;
 }
 
@@ -483,6 +526,7 @@ img{
 
 .tour{
     max-width:1200px;
+
     margin:auto;
 
     padding:0 28px 105px;
@@ -503,7 +547,9 @@ img{
     border:1px solid rgba(198,161,91,.25);
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:25px;
@@ -511,7 +557,9 @@ img{
 
 .tour-left{
     display:flex;
+
     align-items:center;
+
     gap:18px;
 }
 
@@ -522,6 +570,7 @@ img{
     border:1px solid rgba(198,161,91,.5);
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -537,6 +586,7 @@ img{
 
 .tour-title{
     font-size:15px;
+
     font-weight:700;
 
     color:var(--cream);
@@ -544,6 +594,7 @@ img{
 
 .tour-text{
     font-size:12px;
+
     color:#89928b;
 
     margin-top:3px;
@@ -559,6 +610,7 @@ img{
     color:var(--gold);
 
     font-size:11px;
+
     font-weight:700;
 
     transition:.25s;
@@ -566,6 +618,7 @@ img{
 
 .tour-button:hover{
     background:var(--gold);
+
     color:#111;
 }
 
@@ -576,11 +629,13 @@ img{
 
 .about{
     background:var(--cream);
+
     color:#151a17;
 }
 
 .about-inner{
     max-width:1200px;
+
     margin:auto;
 
     padding:105px 28px;
@@ -598,6 +653,7 @@ img{
     margin-top:45px;
 
     display:grid;
+
     grid-template-columns:1.1fr .9fr;
 
     gap:70px;
@@ -658,6 +714,7 @@ img{
 
 .contact-inner{
     max-width:1200px;
+
     margin:auto;
 
     padding:105px 28px 70px;
@@ -667,6 +724,7 @@ img{
 
 .contact .section-title{
     max-width:700px;
+
     margin:auto;
 }
 
@@ -687,21 +745,23 @@ img{
 
 .socials{
     display:flex;
+
     justify-content:center;
     align-items:center;
 
-    gap:12px;
+    gap:14px;
 
     margin-top:38px;
 }
 
 .social{
-    width:47px;
-    height:47px;
+    width:49px;
+    height:49px;
 
     border:1px solid rgba(255,255,255,.12);
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -719,8 +779,8 @@ img{
 }
 
 .social svg{
-    width:19px;
-    height:19px;
+    width:20px;
+    height:20px;
 
     fill:currentColor;
 }
@@ -750,11 +810,12 @@ footer strong{
 
 
 /* =========================================================
-   REVEAL ANIMATION
+   ANIMATION
    ========================================================= */
 
 .reveal{
     opacity:0;
+
     transform:translateY(25px);
 
     transition:
@@ -764,6 +825,7 @@ footer strong{
 
 .reveal.show{
     opacity:1;
+
     transform:translateY(0);
 }
 
@@ -775,13 +837,17 @@ footer strong{
 @media(max-width:800px){
 
     .nav-inner{
-        height:68px;
+        height:72px;
+
         padding:0 20px;
     }
 
+    /* BIGGER MOBILE LOGO */
+
     .logo{
-        height:38px;
-        max-width:180px;
+        height:48px;
+
+        max-width:210px;
     }
 
     .nav-links{
@@ -789,7 +855,7 @@ footer strong{
 
         position:absolute;
 
-        top:68px;
+        top:72px;
         left:0;
 
         width:100%;
@@ -801,6 +867,7 @@ footer strong{
         border-bottom:1px solid rgba(255,255,255,.08);
 
         flex-direction:column;
+
         align-items:flex-start;
 
         gap:20px;
@@ -812,6 +879,7 @@ footer strong{
 
     .menu{
         display:flex;
+
         align-items:center;
         justify-content:center;
     }
@@ -824,11 +892,13 @@ footer strong{
 
     .hero h1{
         font-size:52px;
+
         letter-spacing:-.5px;
     }
 
     .hero-description{
         font-size:14px;
+
         max-width:390px;
     }
 
@@ -841,6 +911,7 @@ footer strong{
     .about-inner,
     .contact-inner{
         padding-left:20px;
+
         padding-right:20px;
     }
 
@@ -849,6 +920,7 @@ footer strong{
     .about-inner,
     .contact-inner{
         padding-top:80px;
+
         padding-bottom:80px;
     }
 
@@ -899,17 +971,29 @@ footer strong{
 
 @media(max-width:480px){
 
+    .nav-inner{
+        padding:0 16px;
+    }
+
+    .logo{
+        height:44px;
+
+        max-width:195px;
+    }
+
     .hero{
         min-height:690px;
     }
 
     .hero h1{
         font-size:46px;
+
         line-height:1.04;
     }
 
     .hero-small{
         font-size:9px;
+
         letter-spacing:3px;
     }
 
@@ -943,6 +1027,7 @@ footer strong{
 }
 
 </style>
+
 </head>
 
 
@@ -957,14 +1042,21 @@ footer strong{
 
     <div class="nav-inner">
 
-        <!-- YOUR LOGO -->
+
+        <!-- ELLKA LOGO -->
+
         <a href="#home">
+
             <img
                 class="logo"
-                src="Untitled design.png"
+                src="ellka-logo-1.png"
                 alt="ELLKA Real Estate & Investment"
             >
+
         </a>
+
+
+        <!-- MOBILE MENU -->
 
         <button
             class="menu"
@@ -974,13 +1066,22 @@ footer strong{
             ☰
         </button>
 
+
+        <!-- NAVIGATION LINKS -->
+
         <div class="nav-links" id="navLinks">
 
-            <a href="#projects">Projects</a>
+            <a href="#projects">
+                Projects
+            </a>
 
-            <a href="#about">About</a>
+            <a href="#about">
+                About
+            </a>
 
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+                Contact
+            </a>
 
             <a
                 class="nav-cta"
@@ -1009,23 +1110,36 @@ footer strong{
 
     <div class="hero-glow"></div>
 
+
     <div class="hero-content reveal">
 
         <div class="hero-small">
+
             <span></span>
+
             ELLKA · Real Estate & Investment
+
         </div>
 
+
         <h1>
+
             Property,
+
             <br>
+
             <em>with perspective.</em>
+
         </h1>
 
+
         <p class="hero-description">
+
             Selected real estate opportunities in Lahore,
             presented clearly so you can explore before you decide.
+
         </p>
+
 
         <div class="hero-buttons">
 
@@ -1035,6 +1149,7 @@ footer strong{
             >
                 Explore Projects
             </a>
+
 
             <a
                 href="#contact"
@@ -1047,8 +1162,11 @@ footer strong{
 
     </div>
 
+
     <div class="hero-bottom">
+
         LAHORE · PAKISTAN
+
     </div>
 
 </section>
@@ -1059,34 +1177,53 @@ footer strong{
      PROJECTS
      ====================================================== -->
 
-<section class="projects-section" id="projects">
+<section
+    class="projects-section"
+    id="projects"
+>
+
 
     <div class="projects">
 
+
         <div class="reveal">
 
+
             <div class="section-label">
+
                 Selected Projects
+
             </div>
 
+
             <h2 class="section-title">
-                Explore what we're<br>
+
+                Explore what we're
+                <br>
                 currently presenting.
+
             </h2>
 
+
             <p class="section-intro">
+
                 Current opportunities presented through ELLKA.
+
             </p>
 
         </div>
 
 
+
         <div class="project-grid">
 
 
-            <!-- BAHRIA SKY 1 -->
+            <!-- ==================================================
+                 BAHRIA SKY 1
+                 ================================================== -->
 
             <article class="project reveal">
+
 
                 <div class="project-image">
 
@@ -1099,19 +1236,30 @@ footer strong{
 
                 </div>
 
+
                 <div class="project-content">
 
+
                     <div class="project-number">
+
                         01 · LAHORE
+
                     </div>
+
 
                     <h3>
+
                         Bahria Sky 1
+
                     </h3>
 
+
                     <div class="project-location">
+
                         Bahria Orchard Phase 4
+
                     </div>
+
 
                     <a
                         class="project-link"
@@ -1119,8 +1267,11 @@ footer strong{
                         target="_blank"
                         rel="noopener"
                     >
+
                         Explore 360° View
+
                         <span>↗</span>
+
                     </a>
 
                 </div>
@@ -1129,14 +1280,17 @@ footer strong{
 
 
 
-            <!-- BAHRIA SKY 2 -->
+            <!-- ==================================================
+                 BAHRIA SKY 2
+                 ================================================== -->
 
             <article class="project reveal">
+
 
                 <div class="project-image">
 
                     <img
-                        src="file_000000007fec8211ba2c4f8ef408c.png"
+                        src="bahria-sky2.png"
                         alt="Bahria Sky 2"
                     >
 
@@ -1144,31 +1298,46 @@ footer strong{
 
                 </div>
 
+
                 <div class="project-content">
 
+
                     <div class="project-number">
+
                         02 · LAHORE
+
                     </div>
+
 
                     <h3>
+
                         Bahria Sky 2
+
                     </h3>
 
+
                     <div class="project-location">
+
                         Bahria Orchard Phase 4
+
                     </div>
+
 
                     <a
                         class="project-link"
                         href="#contact"
                     >
+
                         Request Information
+
                         <span>→</span>
+
                     </a>
 
                 </div>
 
             </article>
+
 
         </div>
 
@@ -1176,17 +1345,21 @@ footer strong{
 
 
 
-    <!-- 360 TOUR MINI FEATURE -->
+    <!-- ==================================================
+         360 TOUR
+         ================================================== -->
 
     <div class="tour reveal">
 
+
         <div class="tour-card">
+
 
             <div class="tour-left">
 
+
                 <div class="tour-icon">
 
-                    <!-- 360 SVG ICON -->
 
                     <svg
                         viewBox="0 0 24 24"
@@ -1211,22 +1384,29 @@ footer strong{
 
                     </svg>
 
+
                 </div>
 
 
                 <div>
 
                     <div class="tour-title">
+
                         See Bahria Sky in 360°
+
                     </div>
 
+
                     <div class="tour-text">
+
                         Explore the virtual experience.
+
                     </div>
 
                 </div>
 
             </div>
+
 
 
             <a
@@ -1235,8 +1415,11 @@ footer strong{
                 rel="noopener"
                 class="tour-button"
             >
+
                 OPEN TOUR ↗
+
             </a>
+
 
         </div>
 
@@ -1250,22 +1433,36 @@ footer strong{
      ABOUT ELLKA
      ====================================================== -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about"
+>
+
 
     <div class="about-inner">
 
+
         <div class="reveal">
 
+
             <div class="section-label">
+
                 About ELLKA
+
             </div>
 
+
             <h2 class="section-title">
-                Less noise.<br>
+
+                Less noise.
+                <br>
                 More clarity.
+
             </h2>
 
+
         </div>
+
 
 
         <div class="about-grid">
@@ -1273,27 +1470,39 @@ footer strong{
 
             <div class="about-copy reveal">
 
-                <p>
-                    ELLKA is a real estate and investment company
-                    based in Lahore, Pakistan.
-                </p>
 
                 <p>
+
+                    ELLKA is a real estate and investment company
+                    based in Lahore, Pakistan.
+
+                </p>
+
+
+                <p>
+
                     Since 2025, we've focused on presenting selected
                     property opportunities and helping clients
                     understand what they're considering before making
                     a decision.
+
                 </p>
 
+
                 <p>
+
                     Simple information. Direct conversations.
                     No unnecessary noise.
+
                 </p>
+
 
             </div>
 
 
+
             <div class="about-facts reveal">
+
 
                 <div class="fact">
 
@@ -1333,6 +1542,7 @@ footer strong{
 
                 </div>
 
+
             </div>
 
         </div>
@@ -1347,25 +1557,41 @@ footer strong{
      CONTACT
      ====================================================== -->
 
-<section class="contact" id="contact">
+<section
+    class="contact"
+    id="contact"
+>
+
 
     <div class="contact-inner reveal">
 
+
         <div class="section-label">
+
             Connect With ELLKA
+
         </div>
 
+
         <h2 class="section-title">
+
             Let's talk property.
+
         </h2>
 
+
         <p class="contact-description">
+
             Follow ELLKA or contact us through the platforms below
             for current projects and enquiries.
+
         </p>
 
 
-        <!-- SOCIAL ICONS ONLY -->
+
+        <!-- ==================================================
+             SOCIAL MEDIA ICONS
+             ================================================== -->
 
         <div class="socials">
 
@@ -1381,7 +1607,9 @@ footer strong{
             >
 
                 <svg viewBox="0 0 24 24">
+
                     <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v5h4v-5h3.2l.8-4H13V9c0-.7.3-1 1-1z"/>
+
                 </svg>
 
             </a>
@@ -1486,6 +1714,29 @@ footer strong{
             </a>
 
 
+
+            <!-- WHATSAPP -->
+
+            <a
+                class="social"
+                href="https://wa.me/923021474791?text=Message%20Shayan%20Rashid"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+
+                    <path d="M12 2a9.9 9.9 0 0 0-8.55 14.9L2 22l5.25-1.38A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.08-1.12l-.3-.18-3.12.82.83-3.04-.2-.31A8 8 0 1 1 12 20zm4.39-5.99c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.01-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+
+                </svg>
+
+            </a>
+
+
         </div>
 
     </div>
@@ -1501,7 +1752,11 @@ footer strong{
 <footer>
 
     © 2026
-    <strong>ELLKA</strong>
+
+    <strong>
+        ELLKA
+    </strong>
+
     — Real Estate & Investment.
 
 </footer>
@@ -1523,7 +1778,7 @@ function toggleMenu(){
 }
 
 
-/* Close mobile menu when a link is clicked */
+/* CLOSE MOBILE MENU */
 
 document
     .querySelectorAll(".nav-links a")
